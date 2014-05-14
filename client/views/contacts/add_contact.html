@@ -1,0 +1,59 @@
+<template name="addContact">
+    <div id="add-contact">
+        <h2>Add a contact</h2>
+
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <select name="action" class="form-control">
+                        <option>received</option>
+                        <option>sent</option>
+                        <option>had</option>
+                        <option>applied</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-6">
+                    <select name="messageType" class="form-control">
+                        <option>an email</option>
+                        <option>a call</option>
+                        <option>a skype</option>
+                        <option>on their website</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <label for="fromPerson">from</label>
+                    <input type="text" class="form-control" name="fromPerson" placeholder="a person" />
+                </div>
+
+                <div class="col-xs-6">
+                    <label for="fromCompany">working at</label>
+                    <input type="text" class="form-control" name="fromCompany" placeholder="a company" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <label for="date" class="datepicker-label">on</label>
+                    <div class="input-group date" id="datetimepicker">
+                        <input type="text" id="date" name="date" class="form-control" />
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker').datetimepicker();
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg">add</button>
+            </div>
+        </form>
+    </div>
+</template>

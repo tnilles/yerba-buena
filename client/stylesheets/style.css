@@ -1,0 +1,239 @@
+body {
+    background-color: #F3F0EA;;
+    font-family: 'Proxima Nova', 'Lucida Grande', Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.brand {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: rgb(58, 58, 58);
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+    z-index: 1000;
+}
+
+.brand:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    padding: 0 170px;
+    overflow: hidden;
+}
+
+#main {
+    position: relative;
+}
+
+#main-feed {
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+#main-feed .company {
+    display: inline-block;
+    background-color: rgb(255, 97, 97);
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    padding: 1px 11px;
+    border-radius: 50%;
+    color: rgb(255, 236, 236);
+    border: 3px solid rgb(255, 147, 147);
+    position: relative;
+    z-index: 100;
+}
+
+#main-feed .yahoo {
+    color: rgb(236, 255, 236);
+    border: 4px solid rgb(145, 255, 149);
+    background-color: rgb(97, 255, 103);
+}
+
+#main-feed .feed-item p {
+    display: inline-block;
+    margin-left: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+
+#main-feed .feed-item p .date {
+    font-weight: normal;
+    font-style: italic;
+    color: rgb(83, 83, 83);
+    padding-left: 10px;
+}
+
+#main-feed .feed-item p .date:before {
+    content: '— ';
+}
+
+#main-feed .feed-item {
+    margin-bottom: 40px;
+}
+
+#main-feed .company:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 150px;
+    background-color: rgb(226, 226, 226);
+    position: absolute;
+    top: 47px;
+    left: 19px;
+    z-index: 0;
+}
+
+#add-contact {
+    background-color: white;
+    padding: 50px;
+    margin: 40px 170px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+    padding-top: 30px;
+}
+
+#add-contact h2 {
+    margin: 0 0 29px 0;
+    font-weight: bold;
+    color: rgb(39, 39, 39);
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+#add-contact label + input {
+    display: inline-block;
+    width: auto;
+    margin-left: 5px;
+}
+
+#add-contact label.datepicker-label {
+    float: left;
+    margin-right: 10px;
+    line-height: 31px;
+}
+
+#add-contact button[type=submit] {
+    margin: 0 auto;
+    display: block;
+    width: 110px;
+    margin-top: 30px;
+}
+
+#openings {
+    position: relative;
+}
+
+.add-opening {
+    background-color: rgb(0, 185, 52);
+    width: 50px;
+    height: 50px;
+    padding: 0px 5px;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 42px;
+    color: white;
+    position: absolute;
+    right: -60px;
+    cursor: pointer;
+    transition: 0.2s all ease-out;
+}
+
+.add-opening:hover {
+    background-color: rgb(0, 216, 60);
+}
+
+.add-opening .open {
+    font-size: 32px;
+    margin-left: 5px;
+}
+
+.add-opening .close {
+    float: none;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-shadow: inherit;
+    opacity: inherit;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    font-size: 32px;
+    margin-top: 6px;
+    margin-left: 4px;
+}
+
+.add-opening .close:hover {
+    color: inherit;
+}
+
+.opening {
+    background-color: white;
+    padding: 50px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 100;
+}
+
+.opening h1,
+.opening h3 {
+    margin: 0;
+    display: inline-block;
+}
+
+.opening h1 {
+    font-weight: bold;
+}
+
+.opening h1 a {
+    color: rgb(51, 51, 51);
+}
+
+.opening h1 a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.opening h2 {
+    font-size: 24px;
+    margin: 10px 0 25px 0;
+    color: rgb(52, 95, 206);
+}
+
+.opening h3 {
+    color: rgb(190, 190, 190);
+    padding-left: 15px;
+    font-size: 18px;
+    vertical-align: 2px;
+}
+
+#opening-create {
+    position: absolute;
+    top: 0;
+    background-color: rgb(247, 247, 247);
+    width: 60%;
+    padding: 40px /* 290px */;
+    padding-top: 20px;
+    /*right: -100%;
+    margin-right: -170px;*/
+    left: 100%;
+    margin-left: 170px;
+    opacity: 0;
+}
+
+#opening-create h1 {
+    margin-bottom: 70px;
+    text-align: center;
+    color: rgb(67, 104, 37);
+}
+
+
+

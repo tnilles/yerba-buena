@@ -1,0 +1,44 @@
+<template name="openingCreate">
+    <div id="opening-create">
+        <h1>Create a new job opening</h1>
+
+        <form role="form">
+            <div class="form-group">
+                <label for="companyName">Company</label>
+                <input type="text" class="form-control input-lg" id="companyName" name="companyName" placeholder="Enter the company's name" />
+            </div>
+
+            <div class="form-group">
+                <label for="jobTitle">Job title</label>
+                <input type="text" class="form-control input-lg" id="jobTitle" name="jobTitle" placeholder="Name the position" />
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control input-lg" id="location" name="location" placeholder="Where the job is?" />
+            </div>
+
+            <div class="form-group">
+                <label for="url">URL</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon">http://</span>
+                    <input type="text" class="form-control input-lg" id="url" name="url" placeholder="link-to-the-offer.com" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Job description</label>
+                <textarea class="form-control input-lg" id="description" name="description" placeholder="Provide with a description of the opening" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <textarea class="form-control input-lg" id="notes" name="notes" placeholder="Various bits of info you wish to keep" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-default btn-lg">Add the opening</button>
+            </div>
+        </form>
+    </div>
+</template>
