@@ -15,8 +15,15 @@ Meteor.methods({
                 throw new Meteor.Error(422, 'Please fill in a ' + field);
         });
 
+        var companyId = addCompany({
+            name: openingAttrs.companyName
+        });
+
+        console.log('companyId; ', companyId)
+
         // Pick out the whitelisted keys
-        var opening = _.extend(_.pick(openingAttrs, 'companyName', 'jobTitle', 'location', 'url', 'description', 'notes'), {
+        var opening = _.extend(_.pick(openingAttrs, 'jobTitle', 'location', 'url', 'description', 'notes'), {
+            companyId: companyId,
             submitted: new Date().getTime(),
             userId: user._id
         });

@@ -9,3 +9,4 @@ Template.masterLayout.events({
 });
 
 openingsHandle = Meteor.subscribe('openings');
+companiesHandle = Meteor.subscribe('companies');

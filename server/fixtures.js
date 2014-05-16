@@ -1,8 +1,23 @@
 if (Openings.find().count() === 0) {
     var testUserId = Accounts.createUser({email: 'test@test.com', password : 'test'});
 
+    var google = Companies.insert({
+        name: 'Google',
+        userId: testUserId
+    });
+
+    var basecamp = Companies.insert({
+        name: 'Basecamp',
+        userId: testUserId
+    });
+
+    var tactill = Companies.insert({
+        name: 'Tactill',
+        userId: testUserId
+    });
+
     Openings.insert({
-        companyName: 'Google',
+        companyId: google,
         location: 'Mountain View, CA',
         jobTitle: 'UI Engineer',
         description: 'Work on the gmail team, make tests, implement solutions for internal test first',
@@ -12,7 +27,7 @@ if (Openings.find().count() === 0) {
     });
 
     Openings.insert({
-        companyName: 'Tactill',
+        companyId: tactill,
         location: 'Montrouge, France',
         jobTitle: 'Web Developer',
         description: 'Tills on an iPad',
@@ -22,7 +37,7 @@ if (Openings.find().count() === 0) {
     });
 
     Openings.insert({
-        companyName: 'Basecamp',
+        companyId: basecamp,
         location: 'Anywhere (remote)',
         jobTitle: 'Frontend dev',
         description: 'Work on their new project, a super-chat for companies',
