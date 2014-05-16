@@ -17,6 +17,7 @@ Template.signin.events({
                 $('#signinError').html('Your email/password don\'t match')
             } else {
                 // The user has been logged in.
+                Router.go('openingsList');
             }
         });
         return false;
