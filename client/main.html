@@ -2,12 +2,15 @@
     <title>Yerba Buena Project</title>
 </head>
 <body>
+    {{renderRouter}}
+</body>
+
+<template name="masterLayout">
     <div class="content">
         {{> header}}
         <div id="main">
-            {{renderRouter}}
 
-            {{> openingsList}}
+            {{> yield}}
 
             <!-- <div id="main-feed">
                 <div class="feed-item">
@@ -37,4 +40,4 @@
 
         </div>
     </div>
-</body>
+</template>

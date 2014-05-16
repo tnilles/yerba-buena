@@ -1,0 +1,30 @@
+<template name="signin">
+<!--     <div>
+      {{#if currentUser}}
+        <div>
+          You are logged in {{currentUser._id}}. <a id="logout">log out</a>
+        </div>
+      {{else}}
+        not logged in
+      {{/if}}
+    </div> -->
+
+    <form id="login-form" action="action">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control input-lg" id="email" name="email" placeholder="" />
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control input-lg" id="password" name="password" placeholder="" />
+        </div>
+
+        <p class="bg-danger" id="signinError">{{signinError}}</p>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-default btn-lg">Login</button>
+            <a class="btn btn-link sign-link">Signup</a>
+        </div>
+    </form>
+</template>

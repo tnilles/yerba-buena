@@ -3,6 +3,8 @@
     "bootstrap-3": {},
     "moment": {},
     "bootstrap3-datetimepicker": {},
-    "velocityjs": {}
+    "velocityjs": {},
+    "accounts-ui-bootstrap-3": {},
+    "iron-router": {}
   }
 }

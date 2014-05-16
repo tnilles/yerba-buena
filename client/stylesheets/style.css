@@ -5,8 +5,8 @@ body {
 }
 
 .brand {
-    position: absolute;
-    top: 20px;
+    position: fixed;
+    top: 40px;
     left: 30px;
     background-color: rgb(58, 58, 58);
     padding: 15px;
@@ -21,13 +21,21 @@ body {
     color: white;
 }
 
+.sign-link {
+    float: right;
+    padding-top: 12px;
+}
+
 .content {
     padding: 0 170px;
     overflow: hidden;
+    position: relative;
 }
 
 #main {
     position: relative;
+    top: 20px;
+    padding-bottom: 20px;
 }
 
 #main-feed {
@@ -235,5 +243,53 @@ body {
     color: rgb(67, 104, 37);
 }
 
+
+
+
+/* Signin - Signup */
+
+/* entire container, keeps perspective */
+.flip-container {
+    -webkit-perspective: 1000;
+    position: fixed;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.flip-container, .front, .back {
+    width: 400px;
+    height: 300px;
+}
+
+/* flip speed goes here */
+.flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 100% 150px; /* half of height */
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    background-color: white;
+    padding: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+    -webkit-transform: rotateX(-180deg);
+}
 
 

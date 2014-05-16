@@ -10,3 +10,6 @@ bootstrap-3
 moment
 bootstrap3-datetimepicker
 velocityjs
+accounts-password
+accounts-ui-bootstrap-3
+iron-router
