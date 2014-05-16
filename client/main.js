@@ -7,3 +7,5 @@ Template.masterLayout.events({
         return false;
     }
 });
+
+openingsHandle = Meteor.subscribe('openings');

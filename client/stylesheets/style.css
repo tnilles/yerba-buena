@@ -223,6 +223,18 @@ body {
     vertical-align: 2px;
 }
 
+.delete-opening {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: darkgrey;
+    cursor: pointer;
+}
+
+.delete-opening:hover {
+    color: black;
+}
+
 #opening-create {
     position: absolute;
     top: 0;

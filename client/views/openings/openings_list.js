@@ -52,7 +52,7 @@ Template.openingsList.events({
             jobTitle: getVal(e, 'jobTitle'),
             description: getVal(e, 'description'),
             notes: getVal(e, 'notes'),
-            url: getVal(e, 'url')
+            url: getVal(e, 'url'),
         };
 
         console.log(opening)
@@ -65,5 +65,12 @@ Template.openingsList.events({
                 Session.set('addOpeningOpened', false);
             }
         });
+    },
+    'click .delete-opening': function(e) {
+        e.preventDefault();
+
+        if (confirm('Delete this opening?')) {
+            Openings.remove(this._id);
+        }
     }
 });
