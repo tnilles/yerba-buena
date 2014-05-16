@@ -5,6 +5,8 @@
     "bootstrap3-datetimepicker": {},
     "velocityjs": {},
     "accounts-ui-bootstrap-3": {},
-    "iron-router": {}
+    "iron-router": {},
+    "spin": {},
+    "autocomplete": {}
   }
 }

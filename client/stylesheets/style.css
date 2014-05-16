@@ -305,3 +305,16 @@ body {
 }
 
 
+
+.-autocomplete-item {
+    cursor: pointer;
+}
+
+.company-pill {
+    color: #333!important;
+    cursor: pointer;
+}
+
+.selected .company-pill {
+    color: white!important;
+}

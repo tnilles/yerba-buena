@@ -5,7 +5,8 @@
         <form role="form">
             <div class="form-group">
                 <label for="companyName">Company</label>
-                <input type="text" class="form-control input-lg" id="companyName" name="companyName" placeholder="Enter the company's name" />
+                {{> inputAutocomplete settings=settings id="companyName" name="companyName" class="form-control input-lg" placeholder="Enter the company's name"}}
+                <!--<input type="text" class="form-control input-lg" id="companyName" name="companyName" placeholder="Enter the company's name" />-->
             </div>
 
             <div class="form-group">
@@ -41,4 +42,8 @@
             </div>
         </form>
     </div>
+</template>
+
+<template name="companyPill">
+    <span class="label company-pill">{{name}}</span>
 </template>

@@ -19,8 +19,6 @@ Meteor.methods({
             name: openingAttrs.companyName
         });
 
-        console.log('companyId; ', companyId)
-
         // Pick out the whitelisted keys
         var opening = _.extend(_.pick(openingAttrs, 'jobTitle', 'location', 'url', 'description', 'notes'), {
             companyId: companyId,
