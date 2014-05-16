@@ -14,8 +14,8 @@ var IRHooks = {
     }
 };
 
-/*Router.onAfterAction(IRHooks.clearErrors);
-Router.onBeforeAction(IRHooks.requireLogin, {only: ['postSubmit']});*/
+/*Router.onAfterAction(IRHooks.clearErrors);*/
+Router.onBeforeAction(IRHooks.requireLogin, {only: ['openingsList']});
 
 Router.configure({
     layoutTemplate: 'masterLayout'
