@@ -1,6 +1,9 @@
 Template.openingsList.helpers({
     openings: function() {
         return Openings.find({}, {sort: {submitted: -1}});
+    },
+    anyOpenings: function() {
+        return Openings.find({}, {sort: {submitted: -1}}).count() > 0;
     }
 });
 

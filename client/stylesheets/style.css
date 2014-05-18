@@ -28,13 +28,12 @@ body {
 
 .content {
     padding: 0 170px;
-    overflow: hidden;
     position: relative;
 }
 
 #main {
     position: relative;
-    top: 20px;
+    top: 40px;
     padding-bottom: 20px;
 }
 
@@ -150,6 +149,7 @@ body {
     color: white;
     position: absolute;
     right: -60px;
+    top: 0;
     cursor: pointer;
     transition: 0.2s all ease-out;
 }
@@ -189,6 +189,10 @@ body {
     margin: 20px auto;
     position: relative;
     z-index: 100;
+}
+
+#openings .opening:first-child {
+    margin-top: 0px;
 }
 
 .opening h1,

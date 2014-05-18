@@ -1,5 +1,13 @@
 <template name="openingsList">
     <div id="openings">
+        {{#each openings}}
+            {{> openingItem}}
+        {{/each}}
+
+        {{#unless anyOpenings}}
+            <p>No openings yet</p>
+        {{/unless}}
+
         <div class="add-opening">
             <span class="open">
                 <span class="glyphicon glyphicon-plus"></span>
@@ -8,10 +16,6 @@
                 <span class="glyphicon glyphicon-th-list"></span>
             </span>
         </div>
-
-        {{#each openings}}
-            {{> openingItem}}
-        {{/each}}
     </div>
 
     {{> openingCreate}}
