@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "beebris";
+    src: url('/fonts/beebris.ttf');
+}
+
+a.brand:before { /* JUST FOR FUN */
+    content: 'JAGUAR';
+    display: block;
+    position: fixed;
+    top: 76px;
+    font-family: beebris;
+    color: rgb(243, 0, 0);
+    font-size: 22px;
+    -webkit-transform: rotateZ(-20deg);
+    left: 19Px;
+    text-shadow: 1px 1px 1Px rgba(255, 43, 162, 1);
+}
+
 body {
     background-color: #F3F0EA;;
     font-family: 'Proxima Nova', 'Lucida Grande', Helvetica, sans-serif;
@@ -185,7 +203,7 @@ body {
 
 .opening {
     background-color: white;
-    padding: 50px;
+    padding: 40px 50px;
     margin: 20px auto;
     position: relative;
     z-index: 100;
@@ -216,7 +234,7 @@ body {
 
 .opening h2 {
     font-size: 24px;
-    margin: 10px 0 25px 0;
+    margin: 5px 0 20px 0;
     color: rgb(52, 95, 206);
 }
 
@@ -225,6 +243,56 @@ body {
     padding-left: 15px;
     font-size: 18px;
     vertical-align: 2px;
+}
+
+.opening .persons {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    font-size: 14px;
+    color: gray;
+    height: 35px;
+}
+
+.opening .add-person-link,
+.opening .add-person-form,
+.opening .list,
+.opening .no-persons {
+    display: inline-block;
+}
+
+.opening .list .person {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.opening .list .delete-person {
+    font-size: 9px;
+    background-color: rgb(211, 176, 176);
+    color: white;
+    padding: 1px;
+    cursor: pointer;
+    vertical-align: 1px;
+    border-radius: 2px;
+}
+
+.opening .list .delete-person:hover {
+    background-color: rgb(206, 52, 52);
+}
+
+.opening .add-person-form {
+    display: none;
+    margin-top: -6px;
+}
+
+.opening .add-person-form input {
+    display: inline-block;
+    width: auto;
+    margin-left: 10px;
+}
+
+.opening .add-person-form button {
+    display: inline-block;
 }
 
 .delete-opening {

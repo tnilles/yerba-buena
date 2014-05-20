@@ -1,3 +1,11 @@
+Template.signin.helpers({
+    userEmail: function() {
+        var user = Meteor.user();
+        console.log(user)
+        return user && user.emails[0].address;
+    }
+});
+
 Template.signin.events({
     'submit #login-form' : function(e, t){
         e.preventDefault();
