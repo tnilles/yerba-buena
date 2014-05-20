@@ -46,7 +46,7 @@ Template.openingsList.events({
             Session.set('addOpeningOpened', false);
         }
     },
-    'submit form': function(e) {
+    'submit #opening-create form': function(e) {
         e.preventDefault();
 
         var opening = {
