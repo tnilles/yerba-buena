@@ -10,7 +10,7 @@ Template.openingsList.helpers({
 Deps.autorun(function() {
     if (Session.get('addOpeningOpened')) {
         $('#openings').velocity({
-            marginRight: '77px',
+            marginRight: '67px',
             left: '-100%'
         });
         $('.opening').velocity({ opacity: 0 });
