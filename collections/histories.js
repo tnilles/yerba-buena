@@ -12,7 +12,7 @@ Meteor.methods({
 
         // Ensure all required fields are filled in
         _.each(required, function(field) {
-            if (!historyAttrs[field] && historyAttrs[field] !== '')
+            if (!historyAttrs[field] || historyAttrs[field] === '')
                 throw new Meteor.Error(422, 'Please fill in a ' + field);
         });
 
