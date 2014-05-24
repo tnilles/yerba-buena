@@ -3,7 +3,7 @@ Companies = new Meteor.Collection('companies');
 
 addCompany = function(companyAttrs) {
     var user = Meteor.user(),
-        companyInDB = Companies.findOne({name: companyAttrs.name});
+        companyInDB = Companies.findOne({name: companyAttrs.name, userId: user._id});
 
     if (companyInDB && companyInDB._id)
         return companyInDB._id;
