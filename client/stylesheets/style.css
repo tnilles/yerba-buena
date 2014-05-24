@@ -209,6 +209,19 @@ body {
     z-index: 100;
 }
 
+.opening .opening-info {
+    width: 50%;
+    display: inline-block;
+}
+
+.opening .opening-history {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    background-color: rgb(234, 245, 255);
+    border-radius: 2px;
+}
+
 #openings .opening:first-child {
     margin-top: 0px;
 }
@@ -251,14 +264,15 @@ body {
     border-bottom: 1px solid rgb(235, 235, 235);
     font-size: 14px;
     color: gray;
-    height: 35px;
+    min-height: 35px;
 }
 
 .opening .add-person-link,
 .opening .add-person-form,
 .opening .list,
 .opening .no-persons {
-    display: inline-block;
+    display: inline;
+    line-height: 24px;
 }
 
 .opening .list .person {
@@ -282,7 +296,6 @@ body {
 
 .opening .add-person-form {
     display: none;
-    margin-top: -6px;
 }
 
 .opening .add-person-form input {
@@ -390,3 +403,94 @@ body {
 .selected .company-pill {
     color: white!important;
 }
+
+
+form.history-create {
+    padding: 10px 20px;
+    display: none;
+}
+
+.show-history-create {
+    text-align: center;
+    background-color: rgb(185, 255, 178);
+    padding: 7px;
+    font-weight: bold;
+    color: rgb(18, 148, 0);
+    border-top: 1px solid rgb(166, 253, 131);
+    cursor: pointer;
+    transition: 0.2s all ease-out;
+}
+
+.show-history-create:hover {
+    box-shadow: inset 0px 9px 6px -6px rgba(0, 0, 0, 0.14);
+}
+
+.no-histories {
+    text-align: center;
+    padding: 25px;
+    color: rgb(107, 107, 107);
+}
+
+.history-create select[name=type],
+.history-create select[name=origin],
+.history-create input[name=personName] {
+    display: inline-block;
+    width: auto;
+}
+
+.history-create .date {
+    width: 213px;
+    float: left;
+    margin-right: 10px;
+}
+
+.history-item {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.history-item:nth-child(even) {
+    background-color: rgb(246, 251, 255);
+}
+
+.history-item .glyphicon {
+    margin-right: 5px;
+    color: rgb(255, 0, 102);
+}
+
+.history-item .person {
+    font-weight: bold;
+}
+
+.history-item .date {
+    float: right;
+    color: gray;
+}
+
+.history-item .delete-history {
+    opacity: 0;
+    transition: 0.2s all ease-out;
+}
+
+.history-item:hover .delete-history {
+    opacity: 1;
+}
+
+.history-item .delete-history {
+    font-size: 13px;
+    background-color: rgb(211, 176, 176);
+    color: white;
+    padding: 1px;
+    cursor: pointer;
+    vertical-align: 1px;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+
+.history-item .notes {
+    margin-left: 24px;
+    display: inline-block;
+}
+
+

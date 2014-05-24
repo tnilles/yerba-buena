@@ -1,0 +1,43 @@
+<template name="historyCreate">
+    <form class="history-create" role="form">
+        <div class="form-group">
+            <select name="type" class="form-control">
+                <option>email</option>
+                <option>call</option>
+                <option>skype</option>
+                <option>on-site itw</option>
+                <option>mail</option>
+            </select>
+            <select name="origin" class="form-control">
+                <option>from</option>
+                <option>to</option>
+                <option>with</option>
+            </select>
+            {{> inputAutocomplete settings=settings id="personName" name="personName" class="form-control" placeholder="Enter the person's name"}}
+            <!--<input type="text" class="form-control input-lg" id="companyName" name="companyName" placeholder="Enter the company's name" />-->
+        </div>
+
+        <div class="form-group">
+            <textarea class="form-control" name="notes" placeholder="What was all about?" rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group date datetimepicker">
+                <input type="text" name="date" class="form-control" placeholder="Enter the date" />
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('.datetimepicker').datetimepicker();
+                });
+            </script>
+            <button type="submit" class="btn btn-default">Add</button>
+        </div>
+    </form>
+    <div class="show-history-create">add historic</div>
+</template>
+
+<template name="personPill">
+    <span class="label company-pill">{{name}}</span>
+</template>

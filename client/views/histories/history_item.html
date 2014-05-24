@@ -1,0 +1,11 @@
+<template name="historyItem">
+    <p class="history-item">
+        <span class="glyphicon {{iconType}}"></span>
+        <span class="origin">{{origin}}</span>
+        <span class="person">{{personName}}</span>{{#if notes}}:{{/if}}
+        <span class="date">{{at}}</span>
+        <span class="glyphicon glyphicon-remove delete-history"></span>
+        {{#if notes}}<br>{{/if}}
+        <span class="notes">{{notes}}</span>
+    </p>
+</template>

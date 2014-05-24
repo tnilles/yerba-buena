@@ -1,0 +1,11 @@
+<template name="historiesList">
+    {{#each histories}}
+        {{> historyItem}}
+    {{/each}}
+
+    {{#unless anyHistories}}
+        <p class="no-histories">No historic yet</p>
+    {{/unless}}
+
+    {{> historyCreate}}
+</template>

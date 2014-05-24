@@ -1,32 +1,37 @@
 <template name="openingItem">
     <div class="opening">
-        <h1><a href="{{url}}">{{companyName}}</a></h1>
-        <h3>{{location}}</h3>
-        <span class="glyphicon glyphicon-trash delete-opening"></span>
-        <h2>{{jobTitle}}</h2>
-        <div class="persons">
-            <span class="glyphicon glyphicon-user"></span>
-            {{#if anyPersons}}
-                <div class="list">
-                    {{#each persons}}
-                        <span class="person">
-                            {{name}}
-                            <span class="glyphicon glyphicon-remove delete-person"></span>
-                        </span>
-                    {{/each}}
+        <div class="opening-info">
+            <h1><a href="{{url}}">{{companyName}}</a></h1>
+            <h3>{{location}}</h3>
+            <span class="glyphicon glyphicon-trash delete-opening"></span>
+            <h2>{{jobTitle}}</h2>
+            <div class="persons">
+                <span class="glyphicon glyphicon-user"></span>
+                {{#if anyPersons}}
+                    <div class="list">
+                        {{#each persons}}
+                            <span class="person">
+                                {{name}}
+                                <span class="glyphicon glyphicon-remove delete-person"></span>
+                            </span>
+                        {{/each}}
+                    </div>
+                {{else}}
+                    <div class="no-persons">No relation for this opening.</div>
+                {{/if}}
+                <a class="add-person-link" href="">Add one?</a>
+                <div class="add-person-form">
+                    <form>
+                        <input type="text" class="form-control input" name="personName" placeholder="Who do you know?" />
+                        <button type="submit" class="btn btn-default">Add</button>
+                    </form>
                 </div>
-            {{else}}
-                <div class="no-persons">No relation for this opening.</div>
-            {{/if}}
-            <a class="add-person-link" href="">Add one?</a>
-            <div class="add-person-form">
-                <form>
-                    <input type="text" class="form-control input" name="personName" placeholder="Who do you know?" />
-                    <button type="submit" class="btn btn-default">Add</button>
-                </form>
             </div>
+            <p class="description">{{description}}</p>
+            <p class="notes">{{notes}}</p>
         </div>
-        <p class="description">{{description}}</p>
-        <p class="notes">{{notes}}</p>
+        <div class="opening-history">
+            {{> historiesList}}
+        </div>
     </div>
 </template>
