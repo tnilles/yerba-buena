@@ -1,7 +1,6 @@
 Template.signin.helpers({
     userEmail: function() {
         var user = Meteor.user();
-        console.log(user)
         return user && user.emails[0].address;
     }
 });

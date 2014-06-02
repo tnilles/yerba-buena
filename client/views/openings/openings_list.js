@@ -57,8 +57,6 @@ Template.openingsList.events({
             url: getVal(e, 'url'),
         };
 
-        console.log(opening)
-
         Meteor.call('opening', opening, function(error, id) {
             if (error) {
                 alert(error.reason);

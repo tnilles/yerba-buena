@@ -15,8 +15,6 @@ Template.historyCreate.events({
     'submit form.history-create': function(e) {
         e.preventDefault();
 
-        'type', 'origin', 'person', 'date', 'notes'
-
         var history = {
             type: getVal(e, 'type'),
             origin: getVal(e, 'origin'),
@@ -25,8 +23,6 @@ Template.historyCreate.events({
             notes: getVal(e, 'notes'),
             openingId: this._id
         };
-
-        console.log('history: ', history)
 
         Meteor.call('addHistory', history, function(error, id) {
             if (error) {
