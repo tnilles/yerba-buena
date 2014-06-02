@@ -320,6 +320,17 @@ body {
     color: black;
 }
 
+
+.opening .notes textarea {
+    width: 100%;
+    border: 0;
+    resize: none;
+}
+
+.opening .notes textarea:focus {
+    outline: none;
+}
+
 #opening-create {
     position: absolute;
     top: 0;
@@ -492,5 +503,6 @@ form.history-create {
     margin-left: 24px;
     display: inline-block;
 }
+
 
 
