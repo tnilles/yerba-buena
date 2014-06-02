@@ -53,7 +53,6 @@ Template.openingsList.events({
             companyName: getVal(e, 'companyName'),
             location: getVal(e, 'location'),
             jobTitle: getVal(e, 'jobTitle'),
-            description: getVal(e, 'description'),
             notes: getVal(e, 'notes'),
             url: getVal(e, 'url'),
         };

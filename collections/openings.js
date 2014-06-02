@@ -20,7 +20,7 @@ Meteor.methods({
         });
 
         // Pick out the whitelisted keys
-        var opening = _.extend(_.pick(openingAttrs, 'jobTitle', 'location', 'url', 'description', 'notes'), {
+        var opening = _.extend(_.pick(openingAttrs, 'jobTitle', 'location', 'url', 'notes'), {
             companyId: companyId,
             submitted: new Date().getTime(),
             userId: user._id
