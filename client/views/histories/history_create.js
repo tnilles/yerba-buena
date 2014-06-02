@@ -12,7 +12,7 @@ Template.historyCreate.settings = function() {
 };
 
 Template.historyCreate.events({
-    'submit form.history-create': function(e) {
+    'submit form.history-create': function(e, t) {
         e.preventDefault();
 
         var history = {
@@ -29,25 +29,28 @@ Template.historyCreate.events({
                 alert(error.reason);
             } else {
                 e.target.reset();
+
+                $(t.firstNode).parent().find('.show-history-create').velocity({opacity: 1},{display: 'block'});
+                $(t.firstNode).parent().find('.history-create').css({
+                    opacity: 1,
+                    lineHeight: 'auto'
+                }).velocity({
+                    opacity: 0,
+                    lineHeight: 0
+                },{display: 'none'});
             }
         });
     },
     'click .show-history-create': function(e, t) {
         e.preventDefault();
 
-        $(t.firstNode).parent().find('.show-history-create').velocity({
-            opacity: 0
-        },{
-            display: 'none'
-        });
+        $(t.firstNode).parent().find('.show-history-create').velocity({opacity: 0},{display: 'none'});
         $(t.firstNode).parent().find('.history-create').css({
             opacity: 0,
             lineHeight: 0
         }).velocity({
             opacity: 1,
             lineHeight: 'auto'
-        },{
-            display: 'block'
-        });
+        },{display: 'block'});
     }
 });
