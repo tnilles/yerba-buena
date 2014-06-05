@@ -52,5 +52,17 @@ Template.historyCreate.events({
             opacity: 1,
             lineHeight: 'auto'
         },{display: 'block'});
+    },
+    'click .history-create .hide-history': function(e, t) {
+        e.preventDefault();
+
+        $(t.firstNode).parent().find('.show-history-create').velocity({opacity: 1},{display: 'block'});
+        $(t.firstNode).parent().find('.history-create').css({
+            opacity: 1,
+            lineHeight: 'auto'
+        }).velocity({
+            opacity: 0,
+            lineHeight: 0
+        },{display: 'none'});
     }
 });

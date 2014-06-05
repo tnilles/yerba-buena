@@ -419,6 +419,20 @@ body {
 form.history-create {
     padding: 10px 20px;
     display: none;
+    position: relative;
+}
+
+.history-create .hide-history {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    color: gray;
+}
+
+.history-create .hide-history:hover {
+    color: black;
 }
 
 .show-history-create {
