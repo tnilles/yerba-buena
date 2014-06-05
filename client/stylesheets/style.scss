@@ -1,3 +1,5 @@
+@import "packages/bourbon/bourbon";
+
 @font-face {
     font-family: "beebris";
     src: url('/fonts/beebris.ttf');
@@ -11,7 +13,7 @@ a.brand:before { /* JUST FOR FUN */
     font-family: beebris;
     color: rgb(243, 0, 0);
     font-size: 22px;
-    -webkit-transform: rotateZ(-20deg);
+    @include transform(rotateZ(-20deg));
     left: 19Px;
     text-shadow: 1px 1px 1Px rgba(255, 43, 162, 1);
 }
@@ -169,7 +171,7 @@ body {
     right: -60px;
     top: 0;
     cursor: pointer;
-    transition: 0.2s all ease-out;
+    @include transition(0.2s all ease-out);
 }
 
 .add-opening:hover {
@@ -358,7 +360,7 @@ body {
 
 /* entire container, keeps perspective */
 .flip-container {
-    -webkit-perspective: 1000;
+    @include perspective(1000);
     position: fixed;
     top: 50%;
     margin-top: -150px;
@@ -373,16 +375,15 @@ body {
 
 /* flip speed goes here */
 .flipper {
-    -webkit-transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform-origin: 100% 150px; /* half of height */
-
+    @include transition(0.6s);
+    @include transform-style(preserve-3d);
+    @include transform-origin(100% 150px); /* half of height */
     position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-    -webkit-backface-visibility: hidden;
+    @include backface-visibility(hidden);
     background-color: white;
     padding: 40px;
     position: absolute;
@@ -397,7 +398,7 @@ body {
 
 /* back, initially hidden pane */
 .back {
-    -webkit-transform: rotateX(-180deg);
+    @include transform(rotateX(-180deg));
 }
 
 
@@ -427,7 +428,7 @@ form.history-create {
     top: 4px;
     right: 6px;
     cursor: pointer;
-    -webkit-transition: all 0.2s ease;
+    @include transition(all 0.2s ease);
     color: gray;
 }
 
@@ -443,7 +444,7 @@ form.history-create {
     color: rgb(18, 148, 0);
     border-top: 1px solid rgb(166, 253, 131);
     cursor: pointer;
-    transition: 0.2s all ease-out;
+    @include transition(0.2s all ease-out);
 }
 
 .show-history-create:hover {
@@ -495,7 +496,7 @@ form.history-create {
 
 .history-item .delete-history {
     opacity: 0;
-    transition: 0.2s all ease-out;
+    @include transition(0.2s all ease-out);
 }
 
 .history-item:hover .delete-history {
