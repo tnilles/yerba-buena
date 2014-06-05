@@ -1,7 +1,15 @@
 Openings = new Meteor.Collection('openings');
 
 Openings.allow({
-    remove: ownsDocument
+    remove: ownsDocument,
+    update: ownsDocument
+});
+
+Openings.deny({
+    update: function(userId, opening, fieldNames) {
+        // May only edit the following fields:
+        return (_.without(fieldNames, 'notes').length > 0);
+    }
 });
 
 Meteor.methods({

@@ -40,5 +40,11 @@ Template.openingItem.events({
         if (confirm('Delete this relation?')) {
             Persons.remove(this._id);
         }
+    },
+    'keyup textarea[name=notes]': function(e, t) {
+        Openings.update(t.data._id, {$set: {notes: e.target.value}}, function(error) {
+            if (error)
+                alert(error.reason);
+        });
     }
 });
