@@ -11,7 +11,8 @@
       "spin": {},
       "autocomplete": {},
       "scss": {},
-      "bourbon": {}
+      "bourbon": {},
+      "jquery-autosize": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -63,6 +64,11 @@
         "git": "https://github.com/chicagogrooves/meteor-bourbon.git",
         "tag": "v3.1.8.1",
         "commit": "b55f0968fe7d4a2886898cd8e81394de066a3ae1"
+      },
+      "jquery-autosize": {
+        "git": "https://github.com/spendflow/meteor-jquery-autosize.git",
+        "tag": "v1.17.8r1",
+        "commit": "517be3d26cb2901f65d07de94d250e498d07dc48"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

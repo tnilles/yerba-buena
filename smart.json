@@ -9,6 +9,7 @@
     "spin": {},
     "autocomplete": {},
     "scss": {},
-    "bourbon": {}
+    "bourbon": {},
+    "jquery-autosize": {}
   }
 }
