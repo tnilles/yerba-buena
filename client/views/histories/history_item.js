@@ -10,8 +10,8 @@ Template.historyItem.helpers({
         }
     },
     at: function() {
-        var date = new Date(this.date);
-        return date.toDateString();
+        var date = moment(new Date(this.date));
+        return date.fromNow();
     },
     iconType: function() {
         switch (this.type) {
