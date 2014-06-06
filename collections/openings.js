@@ -8,7 +8,7 @@ Openings.allow({
 Openings.deny({
     update: function(userId, opening, fieldNames) {
         // May only edit the following fields:
-        return (_.without(fieldNames, 'notes').length > 0);
+        return (_.without(fieldNames, 'notes', 'status').length > 0);
     }
 });
 
@@ -31,7 +31,8 @@ Meteor.methods({
         var opening = _.extend(_.pick(openingAttrs, 'jobTitle', 'location', 'url', 'notes'), {
             companyId: companyId,
             submitted: new Date().getTime(),
-            userId: user._id
+            userId: user._id,
+            status: 'active'
         });
 
         var openingId = Openings.insert(opening);

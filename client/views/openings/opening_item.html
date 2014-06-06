@@ -1,9 +1,12 @@
 <template name="openingItem">
-    <div class="opening">
+    <div class="opening {{openingType}}">
         <div class="opening-info">
             <h1><a href="{{url}}">{{companyName}}</a></h1>
             <h3>{{location}}</h3>
-            <span class="glyphicon glyphicon-trash delete-opening"></span>
+            <div class="opening-options">
+                <span class="glyphicon glyphicon-folder-close archive-opening"></span>
+                <span class="glyphicon glyphicon-trash delete-opening"></span>
+            </div>
             <h2>{{jobTitle}}</h2>
             <div class="persons">
                 <span class="glyphicon glyphicon-user"></span>

@@ -209,6 +209,10 @@ body {
     margin: 20px auto;
     position: relative;
     z-index: 100;
+
+    &.archived {
+        opacity: 0.6;
+    }
 }
 
 .opening .opening-info {
@@ -222,6 +226,7 @@ body {
     width: 49%;
     background-color: rgb(234, 245, 255);
     border-radius: 2px;
+    margin-top: 30px;
 }
 
 #openings .opening:first-child {
@@ -310,18 +315,21 @@ body {
     display: inline-block;
 }
 
-.delete-opening {
+.opening-options {
     position: absolute;
     top: 30px;
     right: 30px;
     color: darkgrey;
-    cursor: pointer;
-}
 
-.delete-opening:hover {
-    color: black;
-}
+    .delete-opening, .archive-opening {
+        cursor: pointer;
+        margin-left: 5px;
 
+        &:hover {
+            color: black;
+        }
+    }
+}
 
 .opening .notes textarea {
     width: 100%;

@@ -9,6 +9,9 @@ Template.openingItem.helpers({
     },
     anyPersons: function() {
         return Persons.find({openingId: this._id}, {sort: {submitted: 1}}).count() > 0;
+    },
+    openingType: function() {
+        return Openings.findOne({_id: this._id}).status;
     }
 });
 

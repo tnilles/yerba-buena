@@ -1,6 +1,6 @@
 Template.openingsList.helpers({
     openings: function() {
-        return Openings.find({}, {sort: {submitted: -1}});
+        return Openings.find({}, {sort: {status: 1, submitted: -1}});
     },
     anyOpenings: function() {
         return Openings.find({}, {sort: {submitted: -1}}).count() > 0;
@@ -54,7 +54,7 @@ Template.openingsList.events({
             location: getVal(e, 'location'),
             jobTitle: getVal(e, 'jobTitle'),
             notes: getVal(e, 'notes'),
-            url: getVal(e, 'url'),
+            url: getVal(e, 'url')
         };
 
         Meteor.call('opening', opening, function(error, id) {
@@ -72,5 +72,15 @@ Template.openingsList.events({
         if (confirm('Delete this opening?')) {
             Openings.remove(this._id);
         }
+    },
+    'click .archive-opening': function(e) {
+        e.preventDefault();
+
+        var status = (this.status === 'active') ? 'archived' : 'active';
+
+        Openings.update(this._id, {$set: {status: status}}, function(error) {
+            if (error)
+                alert(error.reason);
+        });
     }
 });
