@@ -59,4 +59,6 @@ Template.openingItem.events({
 
 Template.openingItem.rendered = function() {
     $('.autosize', $(this.firstNode)).autosize();
+    $('.archive-opening').tooltip();
+    $('.delete-opening').tooltip();
 };
