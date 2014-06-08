@@ -207,7 +207,6 @@ body {
     background-color: white;
     padding: 40px 50px;
     margin: 20px auto;
-    position: relative;
     z-index: 100;
 
     &.archived {
@@ -285,6 +284,10 @@ body {
 .opening .list .person {
     margin-left: 5px;
     margin-right: 10px;
+}
+
+.person-name, .delete-address {
+    cursor: pointer;
 }
 
 .opening .list .delete-person {

@@ -14,8 +14,11 @@
                     <div class="list">
                         {{#each persons}}
                             <span class="person">
-                                {{name}}
+                                <span class="person-name">
+                                    {{name}}
+                                </span>
                                 <span class="glyphicon glyphicon-remove delete-person"></span>
+                                {{> editContact}}
                             </span>
                         {{/each}}
                     </div>

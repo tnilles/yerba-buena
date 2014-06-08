@@ -49,9 +49,14 @@ Template.openingItem.events({
             if (error)
                 alert(error.reason);
         });
+    },
+    'click .person-name': function(e) {
+        e.preventDefault();
+
+        $('.modal-sm-' + this._id + this.openingId).modal('show');
     }
 });
 
 Template.openingItem.rendered = function() {
     $('.autosize', $(this.firstNode)).autosize();
-}
+};

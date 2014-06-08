@@ -1,0 +1,38 @@
+<template name="editContact">
+    <div class="modal fade modal-sm-{{_id}}{{openingId}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title" id="myModalLabel">{{name}}</h4>
+                </div>
+                <form class="add-contact-address">
+                    <div class="modal-body">
+
+                        {{#if addresses}}
+                        <ul>
+                            {{#each addresses}}
+                                <li>
+                                    <span class="address">{{this}}</span>
+                                    <span class="delete-address">&times;</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        {{else}}
+                            <p>No addresses for {{name}} yet.</p>
+                        {{/if}}
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control input" id="contact-address" name="contact-address" placeholder="Email, Phone, whatever..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">add</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>

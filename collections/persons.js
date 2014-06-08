@@ -1,7 +1,8 @@
 Persons = new Meteor.Collection('persons');
 
 Persons.allow({
-    remove: ownsDocument
+    remove: ownsDocument,
+    update: ownsDocument
 });
 
 Meteor.methods({
